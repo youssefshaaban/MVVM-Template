@@ -1,28 +1,25 @@
 object Dependencies {
 
-    const val AppCompact =
-        "androidx.appcompat:appcompat:${Versions.AndroidX.main}"
     const val AndroidGradlePlugin =
         "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
+    const val HiltClathPath =
+        "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT_VERSION}"
 
-    val AndroidXCore = arrayOf(
-        "androidx.core:core:${Versions.AndroidX.main}",
-        "androidx.core:core-ktx:${Versions.AndroidX.main}"
-    )
+
+    val AndroidXCore = arrayOf("androidx.core:core:1.5.0", "androidx.core:core-ktx:1.5.0")
 
     val AndroidXLibs = arrayOf(
         // Android Annotation
-        "androidx.annotation:annotation:${Versions.AndroidX.main}",
+        "androidx.annotation:annotation:1.2.0",
 
+        "androidx.appcompat:appcompat:${Versions.AndroidX.main}",
         // MultiDex
         "androidx.multidex:multidex:${Versions.AndroidX.multiDex}",
-
         // ConstraintLayout
         "androidx.constraintlayout:constraintlayout:${Versions.AndroidX.constraintLayout}",
-
         // Android Material
-        "com.google.android.material:material:${Versions.AndroidX.material}"
-
+        "com.google.android.material:material:${Versions.AndroidX.material}",
+        "androidx.recyclerview:recyclerview:${Versions.RECYCLEVIEW_VERSION}"
     )
 
     val AndroidArchComponent = arrayOf(
@@ -30,6 +27,8 @@ object Dependencies {
         "androidx.lifecycle:lifecycle-reactivestreams:${Versions.AndroidX.lifeCycle}"
     )
 
+
+    val GLIDE = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
     const val LifeCycleAnnotations =
         "androidx.lifecycle:lifecycle-compiler:${Versions.AndroidX.lifeCycle}"
 
@@ -69,7 +68,7 @@ object Dependencies {
     )
 
 
-    val Coroutines= arrayOf(
+    val Coroutines = arrayOf(
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Coroutines.coroutinesCoreVersion}",
         "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:${Versions.Coroutines.coroutinesCommonVersion}",
         "androidx.lifecycle:lifecycle-extensions:${Versions.Coroutines.lifecycleExtensionsVersion}",
@@ -77,9 +76,6 @@ object Dependencies {
         "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.Coroutines.lifecycleKTXVersion}"
     )
 
-    val Picasso = arrayOf(
-        "com.squareup.picasso:picasso:${Versions.PICASSO}"
-    )
 
     val Room = arrayOf(
         "androidx.room:room-runtime:${Versions.AndroidX.lifeCycle}",
@@ -88,7 +84,8 @@ object Dependencies {
 
     const val RoomKapt =
         "androidx.room:room-compiler:${Versions.AndroidX.lifeCycle}"
-
+    const val HiltDagger = "com.google.dagger:hilt-android:${Versions.HILT_VERSION}"
+    const val HiltKapt = "com.google.dagger:hilt-compile:${Versions.HILT_VERSION}"
     const val Koin =
         "org.koin:koin-androidx-scope:${Versions.KOIN}"
 
@@ -102,17 +99,17 @@ object Dependencies {
 
     const val Ktlint = "com.pinterest:ktlint:${Versions.KTLINT}"
 
-    val Tracer= arrayOf("com.github.chuckerteam.chucker:library:${Versions.TRACER.chucker_version}"
-        ,"com.github.chuckerteam.chucker:library-no-op:${Versions.TRACER.chucker_version}")
+    const val SDB = "com.intuit.sdp:sdp-android:${Versions.SDB_VERSION}"
 
-    const val SDB="com.intuit.sdp:sdp-android:${Versions.SDB_VERSION}"
+    const val CIRCLE_IMAGE = "de.hdodenhof:circleimageview:${Versions.CIRCLE_IMAGE}"
 
-    const val CIRCLE_IMAGE="de.hdodenhof:circleimageview:${Versions.CIRCLE_IMAGE}"
-
-    val exo_player= arrayOf("com.google.android.exoplayer:exoplayer:${Versions.EXO_VERSION}",
+    const val LOADING = "com.github.ybq:Android-SpinKit:${Versions.SPIN_KIT}"
+    val exo_player = arrayOf(
+        "com.google.android.exoplayer:exoplayer:${Versions.EXO_VERSION}",
         "com.google.android.exoplayer:exoplayer-core:${Versions.EXO_VERSION}",
         "com.google.android.exoplayer:exoplayer-dash:${Versions.EXO_VERSION}",
         "com.google.android.exoplayer:exoplayer-ui:${Versions.EXO_VERSION}"
-        )
+    )
+
 
 }

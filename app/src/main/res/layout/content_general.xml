@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="baseViewModel"
+            type="com.example.mvvm_template.ui.base.BaseViewModel" />
+        <import type="com.example.mvvm_template.utils.DataStatus"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/content_general"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="@{baseViewModel.dataLoadingEvent ==  DataStatus.INSTANCE.SHOW_DATA ? View.GONE : View.VISIBLE}"
+   >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/empty_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="@{baseViewModel.dataLoadingEvent ==  DataStatus.INSTANCE.NO_DATA ? View.VISIBLE : View.GONE}"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/tv_no_result"
+                    style="@style/Medium_TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="@string/list_no_result"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_no_result"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="@dimen/_250sdp"
+                    app:srcCompat="@drawable/bg_no_data"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/internet_error_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{baseViewModel.dataLoadingEvent ==  DataStatus.INSTANCE.NO_INTERNET ? View.VISIBLE : View.GONE}"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:srcCompat="@drawable/bg_no_internet"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    style="@style/Medium_TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:gravity="center"
+                    android:text="@string/no_internet"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/progress_bar"
+                style="@style/SpinKitView.Large.DoubleBounce"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/purple_500" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

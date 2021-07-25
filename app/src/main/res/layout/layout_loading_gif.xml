@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/gifLoad"
+            android:layout_width="wrap_content"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_height="wrap_content" />
+
+
+<!--        <com.github.ybq.android.spinkit.SpinKitView-->
+<!--            android:id="@+id/loading"-->
+<!--            style="@style/SpinKitView.Large.DoubleBounce"-->
+<!--            android:layout_width="@dimen/_60sdp"-->
+<!--            android:layout_height="@dimen/_60sdp"-->
+<!--            android:layout_gravity="center"-->
+<!--            app:SpinKit_Color="@color/purple_500"-->
+<!--            />-->
+
+
+        <!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="@dimen/_5sdp"-->
+<!--            android:id="@+id/tittle"-->
+<!--            android:textSize="@dimen/txt20"-->
+<!--            android:text="@string/loading"-->
+<!--            />-->
+
+    </LinearLayout>
+</layout>

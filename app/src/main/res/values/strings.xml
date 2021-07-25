@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">MVVM_Template</string>
+    <string name="some_error">"some thing error "</string>
 </resources>

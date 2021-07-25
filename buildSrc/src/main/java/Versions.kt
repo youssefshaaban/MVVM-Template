@@ -6,13 +6,14 @@ object Versions {
     const val compileSdkVersion = 28
     const val minSdkVersion = 21
     const val targetSdkVersion = 28
-    const val gradle = "4.0.1"
     const val kotlin = "1.4.0"
-
+    const val GLIDE = "4.11.0"
+    const val HILT_VERSION = "2.28-alpha"
     const val androidGradlePlugin = "4.0.1"
+    const val SPIN_KIT = "1.4.0"
 
     object AndroidX {
-        const val main = "1.1.0"
+        const val main = "1.3.1"
         const val material = "1.0.0"
         const val multiDex = "2.0.0"
         const val constraintLayout = "1.1.3"
@@ -32,10 +33,6 @@ object Versions {
     }
 
     const val KOIN = "2.0.1"
-
-    object Google {
-
-    }
 
     object TRACER {
         const val chucker_version = "3.4.0"
@@ -59,8 +56,6 @@ object Versions {
         const val okHttp = "4.9.0"
     }
 
-    const val PICASSO = "2.5.0"
-
     const val GSON = "2.8.0"
 
     const val KTLINT = "0.34.2"
@@ -70,4 +65,5 @@ object Versions {
     const val CIRCLE_IMAGE = "3.1.0"
 
     const val EXO_VERSION = "2.12.0"
+    const val RECYCLEVIEW_VERSION = "1.1.0"
 }
