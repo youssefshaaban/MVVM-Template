@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextMediumFont">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="fontFamily">@font/tajawal_medium</item>
+    </style>
+
+    <style name="TextRegularFont">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="fontFamily">@font/tajawal_regular</item>
+    </style>
+    <style name="TextRegularFontDigit">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="fontFamily">@font/digit_regular</item>
+    </style>
+</resources>
